@@ -41,6 +41,11 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/sampl
 # Open Kiali on NodePort
 kubectl -n istio-system patch svc kiali --patch '{"spec": { "type": "NodePort", "ports": [ { "name": "http", "nodePort": 30123, "port": 20001, "protocol": "TCP", "targetPort": 20001 }, { "name": "http-metrics", "nodePort": 30333, "port": 9090, "protocol": "TCP", "targetPort": 9090 } ] } }'
 
+#### JAEGER #####
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/jaeger.yaml
+
+kubectl -n istio-system patch svc tracing --patch '{"spec": { "type": "NodePort", "ports": [ { "name": "http-query", "nodePort": 30567, "port": 80, "protocol": "TCP", "targetPort": 16686 } ] } }'
+
 ##### GRAFANA #####
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/grafana.yaml
 
