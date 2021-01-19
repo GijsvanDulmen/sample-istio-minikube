@@ -43,11 +43,11 @@ kubectl -n istio-system patch svc kiali --patch '{"spec": { "type": "NodePort", 
 
 #### JAEGER #####
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/jaeger.yaml
-
 kubectl -n istio-system patch svc tracing --patch '{"spec": { "type": "NodePort", "ports": [ { "name": "http-query", "nodePort": 30567, "port": 80, "protocol": "TCP", "targetPort": 16686 } ] } }'
 
 ##### GRAFANA #####
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.8/samples/addons/grafana.yaml
+kubectl -n istio-system patch svc grafana --patch '{"spec": { "type": "NodePort", "ports": [ { "name": "service", "nodePort": 30789, "port": 3000, "protocol": "TCP", "targetPort": 3000 } ] } }'
 
 ##### FLAGGER #####
 kubectl apply -k github.com/weaveworks/flagger//kustomize/istio
