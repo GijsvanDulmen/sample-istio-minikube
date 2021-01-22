@@ -71,3 +71,5 @@ cd ../deployments
 ./install.sh
 
 kubectl get pods --all-namespaces
+
+source env.sh
