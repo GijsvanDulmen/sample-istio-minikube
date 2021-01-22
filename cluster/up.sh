@@ -67,9 +67,9 @@ kubectl apply -f ../flagger/deployment.yml
 kubectl apply -f ../flagger/canary.yml
 
 # Open up something
+source ./env.sh
+
 cd ../deployments
 ./install.sh
 
 kubectl get pods --all-namespaces
-
-source env.sh
