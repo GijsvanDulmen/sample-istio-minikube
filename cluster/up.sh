@@ -2,7 +2,7 @@
 
 set -e exit
 
-minikube start --memory=8192 --cpus=4 --vm=true --driver=hyperkit
+minikube -p sample-istio-minikube start --memory=8192 --cpus=4 --vm=true --driver=hyperkit
 
 
 ##### ISTIO INSTALLATION THROUGH OPERATOR #####
