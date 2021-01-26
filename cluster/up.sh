@@ -2,7 +2,7 @@
 
 set -e exit
 
-minikube -p sample-istio-minikube start --memory=8192 --cpus=4 --vm=true --driver=hyperkit
+minikube -p sample-istio-minikube start
 # Open up something
 source ./env.sh
 

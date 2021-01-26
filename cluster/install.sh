@@ -2,7 +2,24 @@
 
 set -e exit
 
-minikube -p sample-istio-minikube start --memory=8192 --cpus=4 --vm=true --driver=hyperkit
+OS="$(uname)"
+case $OS in
+  Darwin)
+    DRIVER="hyperkit"
+    ;;
+  linux)
+    DRIVER="hyperkit"
+    ;;
+  MINGW64* )
+    DRIVER="hyperv"
+    ;;
+  *)
+    echo "Your ${OS} is not supported."
+    exit 1
+    ;;
+esac
+
+minikube -p sample-istio-minikube start --memory=8192 --cpus=4 --vm=true --driver=${DRIVER}
 
 
 ##### ISTIO INSTALLATION THROUGH OPERATOR #####
