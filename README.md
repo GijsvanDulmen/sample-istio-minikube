@@ -10,7 +10,7 @@ Example:
 export PATH=$PATH:/usr/local/Cellar/minikube/1.16.0/bin/
 ```
 ## Install cluster
-After the install has finished, sample applications will be deployed and a script will be called to generate trafic. Normally, your browser will show three new tabs, containg Jaeger, Grafana and Kiali. You can stop the cluster by pressing CMD-C or CTRL-C
+After the install has finished, sample applications will be deployed and a script will be called to generate trafic. Normally, your browser will show three new tabs, containing Jaeger, Grafana and Kiali. You can stop the cluster by pressing CMD-C or CTRL-C
 
 ```
 cd cluster

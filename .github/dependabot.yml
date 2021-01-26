@@ -1,6 +1,6 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/traphic-generator/"
+    directory: "/traffic-generator/"
     schedule:
       interval: "daily"

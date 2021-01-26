@@ -72,7 +72,7 @@ spec:
       request:
           add:
               Always: "Yes!"
-  # Mirror traphic to version 2
+  # Mirror traffic to version 2
   - match:
     - uri:
         prefix: "/mirror"

@@ -3,6 +3,7 @@
 set -e exit
 
 minikube -p sample-istio-minikube start
+
 # Open up something
 source ./env.sh
 
@@ -10,5 +11,5 @@ while ! kubectl wait --for=condition=available --timeout=600s deployment/echo-se
 
 kubectl get pods --all-namespaces
 
-cd ../traphic-generator
+cd ../traffic-generator
 ./run.sh

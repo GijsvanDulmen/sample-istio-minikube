@@ -17,6 +17,6 @@ kubectl -n istio-system apply -f ./headers
 
 while ! kubectl wait --for=condition=available --timeout=600s deployment/echo-server-v1 -n default; do sleep 1; done
 
-# Startup traphic generation
-cd ../traphic-generator
+# Startup traffic generation
+cd ../traffic-generator
 ./run.sh
