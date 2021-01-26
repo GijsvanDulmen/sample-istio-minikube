@@ -26,5 +26,3 @@ cd cluster
 ./up.sh
 cd ..
 ```
-
-## Images

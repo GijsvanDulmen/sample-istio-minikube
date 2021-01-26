@@ -7,12 +7,10 @@ minikube -p sample-istio-minikube start --memory=8192 --cpus=4 --vm=true --drive
 
 ##### ISTIO INSTALLATION THROUGH OPERATOR #####
 
+
 ## Download istio if not already downloaded
 export ISTIO_VERSION=1.8.2
-if [ ! -d "./istio-${ISTIO_VERSION}" ] 
-then
-    curl -L https://istio.io/downloadIstio | ISTIO_VERSION=${ISTIO_VERSION} sh -
-fi
+./install_istio.sh ${ISTIO_VERSION}
 export PATH=$PWD/istio-${ISTIO_VERSION}/bin:$PATH
 
 kubectl create namespace istio-system
