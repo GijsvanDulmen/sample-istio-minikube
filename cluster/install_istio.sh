@@ -49,7 +49,7 @@ then
        ;;
   esac
 else
-  echo "Istio has already been installed!"
+  echo "Istio has already been downloaded!"
 fi
 
 
