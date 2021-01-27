@@ -7,7 +7,7 @@ case $OS in
   Darwin)
     DRIVER="hyperkit"
     ;;
-  linux)
+  linux|Linux)
     DRIVER="hyperkit"
     ;;
   MINGW64* )
