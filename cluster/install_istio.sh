@@ -10,7 +10,7 @@ case $OS in
   Darwin)
     OSEXT="osx"
     ;;
-  linux)
+  linux|Linux)
     OSEXT="linux"
     ;;
   MINGW64* )

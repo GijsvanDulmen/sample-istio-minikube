@@ -8,7 +8,7 @@ case $OS in
     DRIVER="hyperkit"
     ;;
   linux|Linux)
-    DRIVER="hyperkit"
+    DRIVER="kvm2"
     ;;
   MINGW64* )
     DRIVER="hyperv"
