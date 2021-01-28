@@ -29,7 +29,7 @@ spec:
             value:
             - name: http2
               port: 8080
-              targetPort: 80
+              targetPort: 8080
               nodePort: 30000
             - name: status-port
               port: 15021
